@@ -1,12 +1,14 @@
 using System;
 
 namespace oficinas.app.Dominio{
+
     public class Oficina{
 
-        public string nombre{get;set;}
-        public int aforo{get;set;}
-        public int numero_personas{get;set;}
-        
+        public int Id {get;set;}
+        public string Nombre{get;set;}
+        public int Aforo{get;set;}
+        public int Cant_Oficinas_Disponibles {get;set;}
+        public int Numero_personas {get;set;}
 
     }
 }

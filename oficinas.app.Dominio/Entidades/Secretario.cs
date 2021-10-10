@@ -2,10 +2,8 @@ using System;
 
 namespace oficinas.app.Dominio
 {
-    public class Secretario
+    public class Secretario : Persona
     {
-
-        public string despacho { get; set; }
-
+        public string Despacho {get; set;}
     }
 }
