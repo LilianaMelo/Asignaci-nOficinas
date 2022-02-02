@@ -1,0 +1,50 @@
+﻿@page
+@model oficinas.app.Frontend.Pages.EditarAsesorModel
+@{
+}
+<h1>Editar Asesor</h1>
+<form method="post">
+    <input type="hidden" asp-for="asesor.Id">
+    <div class="form-group">
+        <label asp-for="asesor.Nombre"></label>
+        <input asp-for="asesor.Nombre" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="asesor.Apellidos"></label>
+        <input asp-for="asesor.Apellidos" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="asesor.Identificacion"></label>
+        <input asp-for="asesor.Identificacion" class="form-control">
+        <span class="text-danger" asp-validation-for="asesor.Identificacion"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="asesor.Edad"></label>
+        <input asp-for="asesor.Edad" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="asesor.Celular"></label>
+        <input asp-for="asesor.Celular" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="asesor.Correo"></label>
+        <input asp-for="asesor.Correo" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="asesor.HorasLaboradas"></label>
+        <input asp-for="asesor.HorasLaboradas" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="asesor.Estado_covid"></label>
+        <input asp-for="asesor.Estado_covid" class="form-control">
+    </div>
+
+    
+    <button type="submit" class="btn btn-outline-primary">Guardar Cambios</button>
+</form>

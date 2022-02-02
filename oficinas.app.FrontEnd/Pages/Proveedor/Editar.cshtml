@@ -1,0 +1,53 @@
+﻿@page
+@model oficinas.app.Frontend.Pages.EditarModel
+@{
+}
+<h1>Agregar proveedor</h1>
+<form method="post">
+    <input type="hidden" asp-for="proveedor.Id">
+    <div class="form-group">
+        <label asp-for="proveedor.Nombre"></label>
+        <input asp-for="proveedor.Nombre" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="proveedor.Apellidos"></label>
+        <input asp-for="proveedor.Apellidos" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="proveedor.Identificacion"></label>
+        <input asp-for="proveedor.Identificacion" class="form-control">
+        <span class="text-danger" asp-validation-for="proveedor.Identificacion"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="proveedor.Edad"></label>
+        <input asp-for="proveedor.Edad" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="proveedor.Celular"></label>
+        <input asp-for="proveedor.Celular" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="proveedor.Correo"></label>
+        <input asp-for="proveedor.Correo" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="proveedor.HorasLaboradas"></label>
+        <input asp-for="proveedor.HorasLaboradas" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="proveedor.Estado_covid"></label>
+        <input asp-for="proveedor.Estado_covid" class="form-control">
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="proveedor.Servicio_realizado"></label>
+        <input asp-for="proveedor.Servicio_realizado" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="proveedor.Unidad_visitada"></label>
+        <input asp-for="proveedor.Unidad_visitada" class="form-control">
+    </div>
+    
+    <button type="submit" class="btn btn-outline-primary">Guardar Cambios</button>
+</form>

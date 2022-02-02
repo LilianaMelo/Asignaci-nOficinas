@@ -1,0 +1,22 @@
+﻿@page
+@model oficinas.app.Frontend.Pages.DetallesModel
+@{
+}
+<h1>Detalles del proveedor</h1>
+
+<table class="table">
+    <tr>
+        <td>@Model.proveedor.Nombre</td>
+        <td>@Model.proveedor.Apellidos</td>
+        <td>@Model.proveedor.Identificacion</td>
+        <td>@Model.proveedor.Edad</td>
+        <td>@Model.proveedor.Celular</td>
+        <td>@Model.proveedor.Correo</td>
+        <td>@Model.proveedor.HorasLaboradas</td>
+        <td>@Model.proveedor.Estado_covid</td>
+        <td>@Model.proveedor.Servicio_realizado</td>
+        <td>@Model.proveedor.Unidad_visitada</td>
+    </tr>
+
+</table>
+<a class="btn btn-outline-primary" asp-area="" asp-page="/Proveedor/ListProveedor">Proveedores</a>

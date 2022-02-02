@@ -1,3 +1,4 @@
+using System;
 using oficinas.app.Dominio;
 using System.Collections.Generic;
 using System.Linq; /// libreria que arroja objetos de busqueda, para hacer consultas 
@@ -5,7 +6,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace oficinas.app.Persistencia
 {
-    
     public class RepositorioPersona : IRepositorioPersona // implementa la interfaz
     {
         private readonly AppContext _appContext;

@@ -1,0 +1,46 @@
+﻿@page
+@model oficinas.App.Frontend.Pages.ListAsesorModel
+@{
+}
+<h1>Listado Asesores</h1>
+
+<form method="get">
+    <div class="form-group">
+        <p>
+            Asesores: <input type="text" />
+            <input type="submit" value="Filtrar"/>
+        </p>
+    </div>
+</form>
+
+<table class="table">
+    @foreach (var asesor in Model.Asesores)
+    {
+    <tr>
+        <td>@asesor.Id</td>
+        <td>@asesor.Nombre</td>
+        <td>@asesor.Apellidos</td>
+        <td>@asesor.Identificacion</td>
+        <td>@asesor.Edad</td>
+        <td>@asesor.Celular</td>
+        <td>@asesor.Correo</td>
+                
+        <td>
+            <a class="btn btn-outline-primary table-btn" asp-page="./DetallesAsesor" asp-route-asesorId="@asesor.Id">
+            <i class="fas fa-info-circle" aria-hidden="true"> </i></a>
+        </td>
+
+        <td>
+            <a class="btn btn-outline-secondary table-btn" asp-page="./EditarAsesor" asp-route-asesorId="@asesor.Id">
+            <i class="fas fa-address-book" aria-hidden="true"> </i></a>
+        </td>
+
+        <td>
+            <a class="btn btn-outline-danger table-btn" asp-page="./EliminarAsesor" asp-route-asesorId="@asesor.Id">
+            <i class="fas fa-book-dead" aria-hidden="true"></i></a>
+        </td>
+    </tr>
+    }
+    
+</table>
+<a asp-page=".\EditarAsesor" class="btn btn-outline-primary">Adicionar Asesor</a>

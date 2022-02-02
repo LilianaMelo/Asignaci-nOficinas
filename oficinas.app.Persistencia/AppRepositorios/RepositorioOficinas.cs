@@ -1,3 +1,4 @@
+using System;
 using oficinas.app.Dominio;
 using System.Collections.Generic;
 using System.Linq; 
@@ -6,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 namespace oficinas.app.Persistencia
 {
     
-    public class RepositorioOficina : IRepositorioOficina
+    public class RepositorioOficina : IRepositorioOficinas
     {
     
         private readonly AppContext _appContext;
@@ -18,20 +19,20 @@ namespace oficinas.app.Persistencia
 
         //CRUD
         //GetAllOficina
-        IEnumerable<Oficina> IRepositorioOficina.GetAllOficinas()
+        IEnumerable<Oficina> IRepositorioOficinas.GetAllOficinas()
         {
             return _appContext.Oficinas; 
         }
 
         //GetOficina
-        Oficina IRepositorioOficina.GetOficina(int IdOficina)
+        Oficina IRepositorioOficinas.GetOficina(int IdOficina)
         {
-            var oficinaEncontrada = _appContext.Oficina.FirstOrDefault(p => p.Id==IdOficina);
+            var oficinaEncontrada = _appContext.Oficinas.FirstOrDefault(p => p.Id==IdOficina);
             return oficinaEncontrada;
         }
 
         //AddOficina
-        Oficina IRepositorioOficina.AddOficina(Oficina oficina)
+        Oficina IRepositorioOficinas.AddOficina(Oficina oficina)
         {
             var oficinaAdicional = _appContext.Oficinas.Add(oficina);
             _appContext.SaveChanges();
@@ -39,7 +40,7 @@ namespace oficinas.app.Persistencia
         }
 
         //UpdateOficina
-        Oficina IRepositorioOficina.UpdateOficina(Oficina oficina)
+        Oficina IRepositorioOficinas.UpdateOficina(Oficina oficina)
         {
             var oficinaEncontrada = _appContext.Oficinas.FirstOrDefault(p => p.Id==oficina.Id);
 
@@ -56,9 +57,9 @@ namespace oficinas.app.Persistencia
         }
 
         //DeleteOficina
-        bool IRepositorioOficina.DeleteOficina(int IdOficina)
+        bool IRepositorioOficinas.DeleteOficina(int IdOficina)
         {
-            var oficinaEncontrada = _appContext.Personas.FirstOrDefault(p => p.Id== IdOficina);
+            var oficinaEncontrada = _appContext.Oficinas.FirstOrDefault(p => p.Id== IdOficina);
             if (oficinaEncontrada == null)
                 return false;
 

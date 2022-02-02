@@ -1,0 +1,23 @@
+﻿@page
+@model oficinas.app.Frontend.Pages.EliminarModel
+@{
+}
+<h1>¿Esta seguro que desea eliminar este registro?</h1>
+<form method="post"> 
+<table class="table">
+    <tr>
+        <td>@Model.proveedor.Nombre</td>
+        <td>@Model.proveedor.Apellidos</td>
+        <td>@Model.proveedor.Identificacion</td>
+        <td>@Model.proveedor.Edad</td>
+        <td>@Model.proveedor.Celular</td>
+        <td>@Model.proveedor.Correo</td>
+        <td>@Model.proveedor.HorasLaboradas</td>
+        <td>@Model.proveedor.Estado_covid</td>
+        <td>@Model.proveedor.Servicio_realizado</td>
+        <td>@Model.proveedor.Unidad_visitada</td>
+    </tr>
+</table>
+    <input type="hidden" asp-for="proveedor.Id">
+    <button type="submit" class="btn btn-outline-danger">Eliminar</button>
+</form>

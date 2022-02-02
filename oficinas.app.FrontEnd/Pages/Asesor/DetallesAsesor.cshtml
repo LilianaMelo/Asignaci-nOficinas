@@ -1,0 +1,22 @@
+﻿@page
+@model oficinas.App.Frontend.Pages.DetallesAsesorModel
+@{
+}
+<h1>Detalles del asesor</h1>
+
+<table class="table">
+    <tr>
+        <td>@Model.asesor.Id</td>
+        <td>@Model.asesor.Nombre</td>
+        <td>@Model.asesor.Apellidos</td>
+        <td>@Model.asesor.Identificacion</td>
+        <td>@Model.asesor.Edad</td>
+        <td>@Model.asesor.Celular</td>
+        <td>@Model.asesor.Correo</td>
+        <td>@Model.asesor.HorasLaboradas</td>
+        <td>@Model.asesor.Estado_covid</td>
+        <td>@Model.asesor.Oficinas_visitadas</td>
+    </tr>
+
+</table>
+<a class="btn btn-outline-primary" asp-area="" asp-page="/Asesor/ListAsesor">Asesores</a>

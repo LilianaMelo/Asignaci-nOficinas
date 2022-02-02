@@ -1,0 +1,47 @@
+﻿@page
+@model oficinas.App.Frontend.Pages.ListProveedoresModel
+@{
+}
+<h1>Listado de Proveedores</h1>
+
+<form method="get">
+    <div class="form-group">
+        <p>
+            Proveedores: <input type="text" />
+            <input type="submit" value="Filtrar"/>
+        </p>
+    </div>
+</form>
+
+<table class="table">
+    @foreach (var proveedor in Model.Proveedores)
+    {
+    <tr>
+        <td>@proveedor.Id</td>
+        <td>@proveedor.Nombre</td>
+        <td>@proveedor.Apellidos</td>
+        <td>@proveedor.Identificacion</td>
+        <td>@proveedor.Edad</td>
+        <td>@proveedor.Celular</td>
+        <td>@proveedor.Correo</td>
+        
+
+        <td>
+            <a class="btn btn-outline-primary table-btn" asp-page="./Detalles" asp-route-proveedorId="@proveedor.Id">
+            <i class="fas fa-info-circle" aria-hidden="true"> </i></a>
+        </td>
+
+        <td>
+            <a class="btn btn-outline-secondary table-btn" asp-page="./Editar" asp-route-proveedorId="@proveedor.Id">
+            <i class="fas fa-address-book" aria-hidden="true"> </i></a>
+        </td>
+
+        <td>
+            <a class="btn btn-outline-danger table-btn" asp-page="./Eliminar" asp-route-proveedorId="@proveedor.Id">
+            <i class="fas fa-book-dead" aria-hidden="true"> </i></a>
+        </td>
+    </tr>
+    }
+    
+</table>
+<a asp-page=".\Editar" class="btn btn-outline-primary">Adicionar Proveedor</a>

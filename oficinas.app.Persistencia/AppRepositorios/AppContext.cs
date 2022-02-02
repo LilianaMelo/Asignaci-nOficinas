@@ -10,7 +10,7 @@ namespace oficinas.app.Persistencia
         public DbSet <EstadoSalud> Covid1 {get; set;}
         public DbSet <Gobernador> Gobernadores {get;set;}
         public DbSet <Oficina> Oficinas {get; set;}
-        public DbSet <Proveedor> Proveedores {get;set;}
+        public DbSet <Proveedor> Proveedores {get; set;}
         public DbSet <Secretario> Secretarios {get; set;}
         public DbSet <Sede> Sedes {get; set;}
 

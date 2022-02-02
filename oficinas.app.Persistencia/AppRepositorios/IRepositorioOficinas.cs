@@ -1,10 +1,11 @@
+using System;
 using oficinas.app.Dominio;
 using System.Collections.Generic;
 
 
 namespace oficinas.app.Persistencia
 {
-    public interface IRepositorioOficina
+    public interface IRepositorioOficinas
 
     {   
         //CRUD
